@@ -200,7 +200,7 @@ AS SELECT screening.id,
     film.description
    FROM screening
      JOIN film ON film.id = screening.film_id
-  WHERE screening.time_ > '2024-01-01 11:00:00'::timestamp without time zone;
+  WHERE screening.time_ > '2024-01-01 11:00:00' and screening.time_ < '2024-01-02 00:00:00'::timestamp without time zone;
 
 -- Permissions
 
